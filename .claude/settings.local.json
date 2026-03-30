@@ -5,7 +5,10 @@
       "Bash(conda env:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(conda --version)",
+      "Bash(echo \"CONDA_EXE=$CONDA_EXE\")",
+      "Read(//Users/thomashu/neoantigen-pipeline/**)"
     ]
   }
 }
