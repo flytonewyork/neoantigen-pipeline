@@ -1,0 +1,50 @@
+# NeoVax Pipeline - Conda Environment
+# Create: mamba env create -f environment.yml
+# Activate: conda activate neovax
+
+name: neovax
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Alignment & variant calling
+  - bwa=0.7.17
+  - samtools=1.19
+  - gatk4=4.5.0.0
+  - bcftools=1.19
+  - htslib=1.19
+
+  # Annotation
+  - ensembl-vep=112.0
+
+  # RNA-seq
+  - star=2.7.11b
+  - subread=2.0.6
+
+  # HLA typing
+  - optitype=1.3.5
+
+  # Python
+  - python=3.10
+  - pip
+  - jupyter
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - biopython
+
+  # Workflow & QC
+  - snakemake-minimal=8.0
+  - fastqc
+  - multiqc
+  - bedtools
+
+  - pip:
+    - pvactools
+    - pyvcf3
+    - pysam
